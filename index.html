@@ -9,17 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Reem+Kufi:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F5F3EC; --bg-2:#FBFAF6; --paper:#FFFFFF; --cream:#FAF9F6;
-  --green-800:#155E3E; --green-700:#1A6E48; --green-600:#1E7A52; --green-500:#27955F;
-  --green-400:#46B07C; --green-100:#DDEFE4; --green-050:#EEF6F0;
-  --teal-900:#0B2421; --teal-800:#0F2F2A; --teal-700:#16403A;
-  --coral:#D4AF37; --coral-600:#B8932E; --coral-100:#F5ECCB;
-  --lime:#E6C766; --gold:#D4AF37; --blue:#1C6FA6;
-  --ink:#1A2420; --ink-soft:#4A574F; --ink-faint:#8A968C;
-  --line:rgba(11,36,33,.13); --line-soft:rgba(11,36,33,.07);
-  --sh-sm:0 2px 12px rgba(11,36,33,.06);
-  --sh:0 18px 48px -16px rgba(11,36,33,.20);
-  --sh-lg:0 36px 80px -24px rgba(11,36,33,.30);
+  --bg:#F6F9F3; --bg-2:#FFFFFF; --paper:#FFFFFF; --cream:#FDFBF6;
+  --green-800:#0B6B3C; --green-700:#0C7A45; --green-600:#12904F; --green-500:#1CA85E;
+  --green-400:#3FC57E; --green-100:#DCF2E4; --green-050:#EDF8F1;
+  --teal-900:#0A2E1F; --teal-800:#0E3A28; --teal-700:#15613A;
+  --coral:#FF7A1A; --coral-600:#E8650A; --coral-100:#FFE9D5;
+  --lime:#C5E86C; --gold:#F2B43B; --blue:#1C6FA6;
+  --ink:#152019; --ink-soft:#48584D; --ink-faint:#83928A;
+  --line:rgba(10,46,31,.13); --line-soft:rgba(10,46,31,.07);
+  --sh-sm:0 2px 12px rgba(10,46,31,.06);
+  --sh:0 18px 48px -16px rgba(10,46,31,.18);
+  --sh-lg:0 36px 80px -24px rgba(10,46,31,.30);
   --grad-brand:linear-gradient(135deg,#1C6FA6,#1FAE68);
   --r:22px; --r-sm:14px; --r-lg:32px; --maxw:1200px;
 }
@@ -43,8 +43,8 @@ img,svg,video{display:block;max-width:100%}
 .btn::after{content:"";position:absolute;top:0;right:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:right .6s}
 .btn:hover::after{right:130%}
 .btn:active{transform:scale(.97)}
-.btn-cta{background:linear-gradient(135deg,var(--gold),var(--coral-600));color:#2A2305;box-shadow:0 14px 34px -10px rgba(184,147,46,.5)}
-.btn-cta:hover{transform:translateY(-2px);box-shadow:0 22px 44px -10px rgba(184,147,46,.62)}
+.btn-cta{background:linear-gradient(135deg,#FF8A2E,var(--coral-600));color:#fff;box-shadow:0 14px 34px -10px rgba(232,101,10,.5)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 22px 44px -10px rgba(232,101,10,.6)}
 .btn-green{background:var(--green-700);color:#fff;box-shadow:0 14px 30px -12px rgba(14,107,67,.6)}
 .btn-green:hover{background:var(--green-800);transform:translateY(-2px)}
 .btn-ghost{background:rgba(255,255,255,.72);color:var(--teal-800);border:1.6px solid var(--line);backdrop-filter:blur(6px)}
@@ -74,7 +74,7 @@ img,svg,video{display:block;max-width:100%}
 .nav-actions{display:flex;align-items:center;gap:12px}
 .cart-btn{position:relative;width:50px;height:50px;border-radius:15px;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;transition:.22s;color:var(--teal-800)}
 .cart-btn:hover{border-color:var(--green-400);transform:translateY(-1px);box-shadow:var(--sh-sm)}
-.cart-count{position:absolute;top:-7px;left:-7px;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--gold);color:#2A2305;font-size:.74rem;font-weight:800;display:none;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(184,147,46,.5)}
+.cart-count{position:absolute;top:-7px;left:-7px;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--coral);color:#fff;font-size:.74rem;font-weight:800;display:none;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(232,101,10,.5)}
 .cart-count.show{display:flex;animation:pop .3s}
 @keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
 .burger{display:none;width:50px;height:50px;border-radius:15px;background:var(--paper);border:1px solid var(--line);place-items:center;color:var(--teal-800)}
@@ -93,7 +93,7 @@ img,svg,video{display:block;max-width:100%}
 @keyframes pulse{50%{box-shadow:0 0 0 9px rgba(31,174,104,0)}}
 .hero h1{font-size:clamp(2.5rem,6.2vw,4.3rem);margin:24px 0 20px;color:var(--teal-900)}
 .hero h1 .hl{color:var(--coral-600);position:relative;white-space:nowrap}
-.hero h1 .hl::after{content:"";position:absolute;right:0;bottom:6px;width:100%;height:15px;background:rgba(212,175,55,.26);z-index:-1;border-radius:8px}
+.hero h1 .hl::after{content:"";position:absolute;right:0;bottom:6px;width:100%;height:15px;background:rgba(255,122,26,.20);z-index:-1;border-radius:8px}
 .hero p.lead{font-size:1.2rem;color:var(--ink-soft);max-width:540px;margin-bottom:28px;font-weight:500}
 .mode-toggle{display:inline-flex;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px;gap:4px;box-shadow:var(--sh-sm);margin-bottom:26px}
 .mode-toggle button{padding:12px 24px;border-radius:999px;font-weight:800;font-size:.95rem;color:var(--ink-faint);display:flex;align-items:center;gap:8px;transition:.25s}
@@ -189,7 +189,7 @@ section{position:relative;z-index:2}
 .insp-card .ic-foot{margin-top:18px;padding-top:18px;border-top:1px dashed rgba(255,255,255,.2);display:flex;align-items:center;justify-content:space-between}
 .insp-card .ic-foot .lbl{color:#a9cdb6;font-weight:600;font-size:.9rem}
 .insp-card .ic-foot .pay{font-family:"El Messiri";font-weight:700;font-size:1.3rem;color:var(--coral)}
-.float-stamp{position:absolute;top:-22px;left:-18px;background:var(--gold);color:#2A2305;font-family:"Reem Kufi";font-weight:700;padding:12px 18px;border-radius:16px;box-shadow:var(--sh);transform:rotate(-8deg);font-size:.92rem;display:flex;align-items:center;gap:8px;animation:bob 5s ease-in-out infinite}
+.float-stamp{position:absolute;top:-22px;left:-18px;background:var(--coral);color:#fff;font-family:"Reem Kufi";font-weight:700;padding:12px 18px;border-radius:16px;box-shadow:var(--sh);transform:rotate(-8deg);font-size:.92rem;display:flex;align-items:center;gap:8px;animation:bob 5s ease-in-out infinite}
 
 /* STEPS */
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step}
@@ -209,7 +209,7 @@ section{position:relative;z-index:2}
 .b-top{height:160px;background:linear-gradient(150deg,var(--green-050),var(--green-100));display:flex;align-items:center;justify-content:center;gap:6px;position:relative;overflow:hidden}
 .b-top .be{font-size:3rem;filter:drop-shadow(0 8px 14px rgba(10,58,72,.16));transition:.35s}.b-top .be:nth-child(3){font-size:3.6rem}
 .b-card:hover .b-top .be{transform:translateY(-4px) scale(1.05)}
-.b-save{position:absolute;top:14px;left:14px;background:var(--gold);color:#2A2305;font-family:"Reem Kufi";font-weight:700;font-size:.78rem;padding:6px 13px;border-radius:999px;z-index:2}
+.b-save{position:absolute;top:14px;left:14px;background:var(--coral);color:#fff;font-family:"Reem Kufi";font-weight:700;font-size:.78rem;padding:6px 13px;border-radius:999px;z-index:2}
 .b-body{padding:24px;display:flex;flex-direction:column;flex:1}
 .b-body h3{font-size:1.3rem;color:var(--teal-900);margin-bottom:7px}
 .b-body p{color:var(--ink-soft);font-size:.94rem;font-weight:500;margin-bottom:16px;flex:1}
@@ -218,7 +218,7 @@ section{position:relative;z-index:2}
 .b-price .cur{font-size:.85rem;color:var(--ink-faint);font-weight:700}
 .b-price .was{font-size:.95rem;color:var(--ink-faint);text-decoration:line-through;font-weight:600}
 .b-add{width:100%;padding:14px;border-radius:14px;background:var(--green-700);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;gap:9px;transition:.22s}
-.b-add:hover{background:var(--green-800)}.b-add.added{background:var(--gold);color:#2A2305}
+.b-add:hover{background:var(--green-800)}.b-add.added{background:var(--coral);color:#fff}
 
 /* PRODUCTS */
 .products{background:var(--bg)}
@@ -233,7 +233,7 @@ section{position:relative;z-index:2}
 .p-media .emo{font-size:4.6rem;transition:transform .35s;filter:drop-shadow(0 10px 14px rgba(10,58,72,.16));z-index:1}
 .p-card:hover .p-media .emo{transform:scale(1.14) rotate(-5deg)}
 .p-badge{position:absolute;top:13px;right:13px;background:var(--green-600);color:#fff;font-family:"Reem Kufi";font-size:.72rem;font-weight:700;padding:5px 12px;border-radius:999px;z-index:2}
-.p-badge.deal{background:var(--gold);color:#2A2305;right:auto;left:13px}
+.p-badge.deal{background:var(--coral);color:#fff;right:auto;left:13px}
 .p-body{padding:17px 18px 19px;display:flex;flex-direction:column;flex:1}
 .p-body h3{font-family:"Tajawal";font-weight:800;font-size:1.1rem;color:var(--teal-900);margin-bottom:3px}
 .p-unit{font-size:.82rem;color:var(--ink-faint);font-weight:600;margin-bottom:11px}
@@ -244,7 +244,7 @@ section{position:relative;z-index:2}
 .p-price .cur{font-size:.8rem;color:var(--ink-faint);font-weight:700}
 .p-price .was{font-size:.85rem;color:var(--ink-faint);text-decoration:line-through;font-weight:600}
 .p-add{width:100%;padding:12px;border-radius:13px;background:var(--green-700);color:#fff;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;transition:.22s}
-.p-add:hover{background:var(--green-800)}.p-add.added{background:var(--gold);color:#2A2305}
+.p-add:hover{background:var(--green-800)}.p-add.added{background:var(--coral);color:#fff}
 
 /* OFFER */
 .offer{background:linear-gradient(135deg,var(--green-800),var(--teal-900));color:#fff;border-radius:var(--r-lg);padding:50px 44px;display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap;position:relative;overflow:hidden;box-shadow:var(--sh-lg)}
@@ -487,6 +487,25 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
 .p-card:hover .p-media .pv{opacity:1}
 .p-card:hover{box-shadow:0 26px 60px -22px rgba(184,147,46,.28)}
 .btn-cta,.btn-wa{will-change:transform}
+.refer{background:var(--bg-2)}
+.refer-card{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center;background:linear-gradient(150deg,var(--teal-800),var(--teal-900));border-radius:var(--r-lg);padding:52px 46px;position:relative;overflow:hidden;box-shadow:var(--sh-lg)}
+.refer-card::before{content:"";position:absolute;top:-110px;left:-70px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,26,.20),transparent 70%)}
+.refer-card::after{content:"";position:absolute;bottom:-120px;right:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(28,168,94,.24),transparent 70%)}
+.refer-card>div{position:relative;z-index:2}
+.refer-card .eyebrow{color:var(--lime)}
+.refer-card h2{color:#fff;font-size:clamp(1.7rem,3.6vw,2.5rem);margin:12px 0 14px}
+.refer-card p{color:#cfe9d8;font-weight:500}
+.ref-steps{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.ref-step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;font-size:.85rem;font-weight:700;color:#eafff1}
+.ref-box{background:rgba(255,255,255,.06);border:1.6px dashed rgba(242,180,59,.6);border-radius:22px;padding:30px;text-align:center}
+.ref-code{font-family:"El Messiri";font-size:2.2rem;font-weight:700;color:var(--gold);letter-spacing:.06em;margin:10px 0 18px}
+.ref-actions{display:flex;flex-direction:column;gap:10px}
+.float-wa{position:fixed;left:24px;bottom:116px;width:56px;height:56px;border-radius:50%;background:#1FAF54;color:#fff;display:grid;place-items:center;z-index:75;box-shadow:0 14px 30px -10px rgba(31,175,84,.55);transition:.2s}
+.float-wa:hover{transform:translateY(-3px)}
+.wallet-chip{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--coral-100);color:#7A3E07;border-radius:12px;padding:9px;font-weight:800;font-size:.85rem;margin-bottom:12px}
+.dlink{display:block;text-align:center;margin-top:8px;font-size:.8rem;font-weight:800;color:var(--green-700)}
+@media(max-width:980px){.refer-card{grid-template-columns:1fr;padding:38px 26px}.float-wa{left:14px;bottom:96px}}
+@media(max-width:560px){.float-wa{left:12px;bottom:150px;width:52px;height:52px}}
 </style>
 </head>
 <body>
@@ -498,7 +517,8 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
 <div class="strip">
   <span>🚚 توصيل مجاني للطلبات فوق <b>٢٥٬٠٠٠ د.ع</b></span><span class="dot"></span>
   <span>🔍 افحص طلبك أمام المندوب قبل ما تدفع</span><span class="dot"></span>
-  <span>🎁 خصم <b>١٠٪</b> على أول طلب — كود <b>أهلاً</b></span>
+  <span>🎁 خصم <b>١٠٪</b> على أول طلب — كود <b>أهلاً</b></span><span class="dot"></span>
+  <span>🤝 ادعُ صديقك واربح <b>٥٬٠٠٠ د.ع</b></span>
 </div>
 
 <header class="nav" id="nav">
@@ -515,8 +535,8 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
       <span>اطلبها<small>السماوة — محافظة المثنى</small></span>
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#baskets">السلال الجاهزة</a><a href="#subs">الاشتراكات</a><a href="#products">المنتجات</a>
-      <a href="#inspect">افحص قبل الدفع</a><a href="#guarantees">ضماناتنا</a><a href="#contact">تواصل</a>
+      <a href="#products">المنتجات</a><a href="#baskets">السلال</a><a href="#subs">الاشتراكات</a>
+      <a href="#refer">ادعُ أصحابك 🎁</a><a href="#inspect">افحص قبل الدفع</a><a href="#contact">تواصل</a>
     </nav>
     <div class="nav-actions">
       <a href="#contact" class="btn btn-cta desk" style="padding:12px 24px;font-size:.95rem">اطلب الآن</a>
@@ -554,6 +574,7 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
           تسوّق الآن
         </a>
         <a href="#baskets" class="btn btn-ghost">شوف السلال الجاهزة</a>
+        <button id="reorderHero" class="btn btn-ghost" style="display:none" onclick="reorderLast()"><span>🔄 أعد طلبك السابق</span></button>
       </div>
       <div class="hero-trust h-anim" style="animation-delay:.52s">
         <div class="it"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> افحص قبل الدفع</div>
@@ -598,6 +619,44 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
   </div>
 </div>
 
+<section class="sec products" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">طازج كل يوم</span><h2>اختار من بستاننا</h2><p>أسعار بالدينار العراقي · جودة مضمونة · يوصلك نفس اليوم</p></div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-cat="all">الكل</button>
+      <button class="tab" data-cat="fruit">🍎 فواكه</button>
+      <button class="tab" data-cat="veg">🥕 خضروات</button>
+      <button class="tab" data-cat="herb">🌿 أعشاب وأوراق</button>
+      <button class="tab" data-cat="deal">🔥 عروض</button>
+    </div>
+    <div class="p-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="sec baskets" id="baskets">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">اختيار اطلبها</span><h2>سلال جاهزة بأسعار توفّر عليك</h2><p>جهّزنالك أفضل التشكيلات — أضفها للسلة بضغطة واحدة ووفّر أكثر</p></div>
+    <div class="b-grid" id="basketGrid"></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="offer reveal">
+      <div class="offer-txt">
+        <span class="eyebrow">⏳ عرض اليوم فقط</span>
+        <h2>توصيل مجاني + خصم ١٠٪ على أول طلب</h2>
+        <p>كل الطلبات فوق <span class="hlt">٢٥٬٠٠٠ د.ع</span> توصلك مجاناً اليوم. استخدم كود <span class="hlt">أهلاً</span> لخصم ١٠٪ على طلبك الأول. 🎁 وعيّنة فواكه مستوردة <span class="hlt">مجاناً</span> مع كل طلب فوق ٥٠٬٠٠٠ د.ع. العرض ينتهي خلال:</p>
+      </div>
+      <div class="countdown">
+        <div class="cd-box"><div class="n" id="cdH">00</div><div class="l">ساعة</div></div><span class="cd-sep">:</span>
+        <div class="cd-box"><div class="n" id="cdM">00</div><div class="l">دقيقة</div></div><span class="cd-sep">:</span>
+        <div class="cd-box"><div class="n" id="cdS">00</div><div class="l">ثانية</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="inspect" id="inspect">
   <div class="wrap inspect-grid">
     <div class="reveal">
@@ -618,6 +677,31 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
         <div class="check-row"><span class="cb"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ctxt">🍅 طماطم بلدية<small>لون زاهي · بدون أي تلف</small></span></div>
         <div class="check-row"><span class="cb"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ctxt">🥬 خضار ورقية<small>مغسولة ومعبّأة بنظافة</small></span></div>
         <div class="ic-foot"><span class="lbl">كل شي تمام ✅ — الآن ادفع</span><span class="pay">عند الاستلام</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec refer" id="refer">
+  <div class="wrap">
+    <div class="refer-card reveal">
+      <div>
+        <span class="eyebrow">اربحوا سوية 🤝</span>
+        <h2>ادعُ أصحابك… وكل صديق يطلب = <span style="color:var(--gold)">٥٬٠٠٠ د.ع</span> برصيدك</h2>
+        <p>شارك كودك الخاص ويا أصحابك وأهلك: صاحبك ياخذ <b>خصم ١٠٪</b> على أول طلب، وأنت يزيد رصيد محفظتك <b>٥٬٠٠٠ د.ع</b> تستخدمها بطلباتك الجاية. بلا حدود — كل ما دعيت أكثر، ربحت أكثر!</p>
+        <div class="ref-steps">
+          <span class="ref-step">١ · شارك كودك</span>
+          <span class="ref-step">٢ · صاحبك يطلب بخصم ١٠٪</span>
+          <span class="ref-step">٣ · رصيدك +٥٬٠٠٠ د.ع</span>
+        </div>
+      </div>
+      <div class="ref-box">
+        <div style="color:#a9cdb6;font-weight:700;font-size:.9rem">كودك الخاص</div>
+        <div class="ref-code" id="refCode">OTL-····</div>
+        <div class="ref-actions">
+          <button class="btn btn-wa" onclick="shareReferral()"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Z"/></svg> شارك على واتساب</button>
+          <button class="btn btn-ghost" style="color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)" onclick="copyRef()">📋 انسخ الكود</button>
+        </div>
       </div>
     </div>
   </div>
@@ -659,85 +743,53 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
   </div>
 </section>
 
-<section class="sec baskets" id="baskets">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">اختيار اطلبها</span><h2>سلال جاهزة بأسعار توفّر عليك</h2><p>جهّزنالك أفضل التشكيلات — أضفها للسلة بضغطة واحدة ووفّر أكثر</p></div>
-    <div class="b-grid" id="basketGrid"></div>
-  </div>
-</section>
+
 
 <section class="sec subs" id="subs">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">وفّر أكثر · مبيعات تتكرر</span><h2>اشتراكات ذكية توصلك تلقائياً</h2><p>اختر صندوقك الأسبوعي ونوصّلك طازج بانتظام — بخصم ثابت وأولوية بالتوصيل، وتلغي وقت ما تريد.</p></div>
+    <div class="sec-head reveal"><span class="eyebrow">وفّر أكثر · مبيعات تتكرر</span><h2>اشتراكات ذكية توصلك تلقائياً</h2><p>اختر صندوقك الأسبوعي ونوصّلك طازج بانتظام — بخصم ثابت وأولوية بالتوصيل، وتلغي وقت ما تريد. <b style="color:var(--coral)">🎉 أول أسبوع بخصم ٥٠٪!</b></p></div>
     <div class="sub-grid">
       <div class="sub-card reveal">
-        <div class="sub-emo">🥗</div><h3>صندوق الخضار الأسبوعي</h3><div class="sub-freq">كل أسبوع · خصم ١٥٪ ثابت</div>
-        <div class="sub-price"><span class="now">20,000</span><span class="cur">د.ع</span><span class="per">/ أسبوعياً</span></div>
+        <div class="sub-emo">🥗</div><h3>سلة التوفير</h3><div class="sub-freq">كل أسبوع · خصم ١٥٪ ثابت</div>
+        <div class="sub-price"><span class="now">15,000</span><span class="cur">د.ع</span><span class="per">/ أسبوعياً</span></div>
         <ul class="sub-list">
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> تشكيلة خضار طازجة متجددة كل أسبوع</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> توصيل مجاني دائم</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> أولوية بمواعيد التوصيل</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> توقف أو تلغي وقت ما تريد</li>
         </ul>
-        <button class="btn btn-green" onclick="subscribeWhatsApp('صندوق الخضار الأسبوعي')">اشترك عبر واتساب</button>
+        <button class="btn btn-green" onclick="subscribeWhatsApp('سلة التوفير الأسبوعية')">اشترك عبر واتساب</button>
       </div>
       <div class="sub-card pop reveal">
         <div class="sub-tag">⭐ الأكثر طلباً</div>
-        <div class="sub-emo">🧺</div><h3>الصندوق المتكامل</h3><div class="sub-freq">كل أسبوع · خصم ٢٠٪ ثابت</div>
-        <div class="sub-price"><span class="now">35,000</span><span class="cur">د.ع</span><span class="per">/ أسبوعياً</span></div>
+        <div class="sub-emo">🧺</div><h3>السلة الذهبية</h3><div class="sub-freq">كل أسبوع · خصم ٢٠٪ + هدية أسبوعية</div>
+        <div class="sub-price"><span class="now">30,000</span><span class="cur">د.ع</span><span class="per">/ أسبوعياً</span></div>
         <ul class="sub-list">
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> فواكه + خضار مختارة بعناية</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> توصيل مجاني + أولوية قصوى</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 🎁 عيّنة فواكه مستوردة هدية كل أسبوع</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> تخصّص محتويات الصندوق حسب ذوقك</li>
         </ul>
-        <button class="btn btn-cta" onclick="subscribeWhatsApp('الصندوق المتكامل الأسبوعي')">اشترك الآن</button>
+        <button class="btn btn-cta" onclick="subscribeWhatsApp('السلة الذهبية الأسبوعية')">اشترك الآن</button>
       </div>
       <div class="sub-card reveal">
-        <div class="sub-emo">🍓</div><h3>صندوق الفواكه الأسبوعي</h3><div class="sub-freq">كل أسبوع · خصم ١٥٪ ثابت</div>
-        <div class="sub-price"><span class="now">18,000</span><span class="cur">د.ع</span><span class="per">/ أسبوعياً</span></div>
+        <div class="sub-emo">👑</div><h3>سلة VIP العائلية</h3><div class="sub-freq">كل أسبوع · خصم ٢٥٪ + أولوية قصوى</div>
+        <div class="sub-price"><span class="now">45,000</span><span class="cur">د.ع</span><span class="per">/ أسبوعياً</span></div>
         <ul class="sub-list">
-          <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> فواكه موسمية ومستوردة طازجة</li>
+          <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> كل محتويات السلة الذهبية بكميات أكبر</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> توصيل مجاني دائم</li>
-          <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> أولوية بمواعيد التوصيل</li>
+          <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> كاش باك ٥٪ يرجع لمحفظتك أسبوعياً</li>
           <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> توقف أو تلغي وقت ما تريد</li>
         </ul>
-        <button class="btn btn-green" onclick="subscribeWhatsApp('صندوق الفواكه الأسبوعي')">اشترك عبر واتساب</button>
+        <button class="btn btn-green" onclick="subscribeWhatsApp('سلة VIP العائلية')">اشترك عبر واتساب</button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec products" id="products">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">طازج كل يوم</span><h2>اختار من بستاننا</h2><p>أسعار بالدينار العراقي · جودة مضمونة · يوصلك نفس اليوم</p></div>
-    <div class="tabs" id="tabs">
-      <button class="tab active" data-cat="all">الكل</button>
-      <button class="tab" data-cat="fruit">🍎 فواكه</button>
-      <button class="tab" data-cat="veg">🥕 خضروات</button>
-      <button class="tab" data-cat="herb">🌿 أعشاب وأوراق</button>
-      <button class="tab" data-cat="deal">🔥 عروض</button>
-    </div>
-    <div class="p-grid" id="productGrid"></div>
-  </div>
-</section>
 
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <div class="offer reveal">
-      <div class="offer-txt">
-        <span class="eyebrow">⏳ عرض اليوم فقط</span>
-        <h2>توصيل مجاني + خصم ١٠٪ على أول طلب</h2>
-        <p>كل الطلبات فوق <span class="hlt">٢٥٬٠٠٠ د.ع</span> توصلك مجاناً اليوم. استخدم كود <span class="hlt">أهلاً</span> لخصم ١٠٪ على طلبك الأول. 🎁 وعيّنة فواكه مستوردة <span class="hlt">مجاناً</span> مع كل طلب فوق ٥٠٬٠٠٠ د.ع. العرض ينتهي خلال:</p>
-      </div>
-      <div class="countdown">
-        <div class="cd-box"><div class="n" id="cdH">00</div><div class="l">ساعة</div></div><span class="cd-sep">:</span>
-        <div class="cd-box"><div class="n" id="cdM">00</div><div class="l">دقيقة</div></div><span class="cd-sep">:</span>
-        <div class="cd-box"><div class="n" id="cdS">00</div><div class="l">ثانية</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
 
 <section class="sec why" id="why">
   <div class="wrap why-grid">
@@ -825,6 +877,7 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
   </div>
 </footer>
 
+<a class="float-wa" href="https://wa.me/9647748600445?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" target="_blank" aria-label="راسلنا واتساب"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9 1-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.6.5.9 1.1 1.5 1.8 2 .3.2.5.2.7 0l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.8-.1 1.5Z"/></svg></a>
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
 <aside class="drawer" id="drawer" aria-label="سلة التسوق">
   <div class="drawer-head"><h3>🧺 سلّتك</h3><button class="drawer-close" onclick="closeCart()" aria-label="إغلاق"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div>
@@ -840,12 +893,12 @@ footer .brand{color:#fff}footer .brand small{color:#8fb89b}
     </div>
   </div>
   <div class="trust-badge">🔍 افحص قبل الدفع · 🛡️ ضمان استبدال ١٠٠٪ · 💵 الدفع كاش عند الاستلام</div>
-  <div class="cart-items" id="cartItems"><div class="cart-empty" id="cartEmpty"><div class="e">🛒</div><p>سلّتك فاضية. ضيف بعض الطازج!</p></div></div>
+  <div class="cart-items" id="cartItems"><div class="cart-empty" id="cartEmpty"><div class="e">🛒</div><p>سلّتك فاضية. ضيف بعض الطازج!</p><button id="reorderEmpty" class="btn btn-green" style="display:none;margin-top:16px;padding:12px 22px;font-size:.92rem" onclick="reorderLast()">🔄 أعد طلبك السابق</button></div></div>
   <div class="cross-sell" id="crossSell" style="display:none"><div class="cs-title">🌿 لا تنسَ الإضافات الطازجة!</div><div class="cs-row" id="csRow"></div></div>
   <div class="drawer-foot" id="drawerFoot" style="display:none">
     <div class="dtotal"><span class="lbl">المجموع</span><span class="amt" id="cartTotal">0 <small>د.ع</small></span></div>
-    <button class="btn btn-wa" onclick="checkout()"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Z"/></svg> أكمل الطلب عبر واتساب</button>
-    <div class="dnote">🔍 تفحص طلبك قبل الدفع · الدفع عند الاستلام متاح</div>
+    <div class="wallet-chip">💰 محفظتك: <b id="walletAmt" style="margin:0 4px">0</b> د.ع · تكسب ٢٪ رصيد من كل طلب</div><button class="btn btn-wa" onclick="checkout()"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Z"/></svg> أكمل الطلب عبر واتساب</button>
+    <div class="dnote">🔍 تفحص طلبك قبل الدفع · الدفع عند الاستلام متاح</div><a class="dlink" href="#refer" onclick="closeCart()">🤝 ادعُ صديقك واربح ٥٬٠٠٠ د.ع رصيد</a>
   </div>
 </aside>
 
@@ -889,7 +942,7 @@ const findItem=id=>PRODUCTS.find(p=>String(p.id)===String(id))||BUNDLES.find(b=>
 
 function renderProducts(){
   const grid=document.getElementById("productGrid");
-  const list=PRODUCTS.filter(p=>activeCat==="all"?true:activeCat==="deal"?p.deal:p.cat===activeCat);
+  const list=PRODUCTS.filter(p=>activeCat==="all"?true:activeCat==="deal"?p.deal:p.cat===activeCat);list.sort((a,b)=>(b.deal?1:0)-(a.deal?1:0));
   grid.innerHTML=list.map(p=>{
     const tagHtml=p.tags.slice(0,2).map(t=>`<span>🌱 ${t}</span>`).join("");
     const badge=p.deal?`<span class="p-badge deal">خصم</span>`:`<span class="p-badge">طازج</span>`;
@@ -930,12 +983,22 @@ function saveCart(){try{localStorage.setItem("otlubhaa_cart",JSON.stringify(cart
 function loadCart(){try{const s=localStorage.getItem("otlubhaa_cart");if(s){const o=JSON.parse(s);if(o&&typeof o==="object")cart=o;}}catch(e){}}
 const CROSS_IDS=[18,8,10,5];
 function renderCrossSell(){const wrap=document.getElementById("crossSell"),row=document.getElementById("csRow");if(!wrap)return;if(cartCount()===0){wrap.style.display="none";return;}const items=CROSS_IDS.map(id=>PRODUCTS.find(p=>p.id===id)).filter(p=>p&&!cart[p.id]);if(items.length===0){wrap.style.display="none";return;}wrap.style.display="block";row.innerHTML=items.map(p=>`<div class="cs-item"><div class="e">${p.emo}</div><div class="nm">${p.name}</div><div class="pr">${fmt(p.price)} د.ع</div><button class="cs-add" onclick="addToCart('${p.id}')">+ أضف</button></div>`).join("");}
-function fireConfetti(){const emojis=["🌿","🍃","🥬","✨","🎉","🍋","🍓"],colors=["#D4AF37","#E6C766","#FAF9F6","#1E7A52","#B8932E"],n=46;for(let i=0;i<n;i++){const p=document.createElement("div");p.className="confetti-piece";if(Math.random()<0.5){p.textContent=emojis[Math.floor(Math.random()*emojis.length)];}else{p.style.width="9px";p.style.height="13px";p.style.borderRadius="2px";p.style.background=colors[Math.floor(Math.random()*colors.length)];}p.style.left=(Math.random()*100)+"vw";document.body.appendChild(p);const dx=(Math.random()*2-1)*140,dy=window.innerHeight+80,rot=(Math.random()*2-1)*720,dur=1600+Math.random()*900;const an=p.animate([{transform:"translate(0,0) rotate(0deg)",opacity:1},{transform:`translate(${dx}px,${dy}px) rotate(${rot}deg)`,opacity:.85}],{duration:dur,easing:"cubic-bezier(.2,.6,.5,1)",delay:Math.random()*250});an.onfinish=()=>p.remove();}}
+function fireConfetti(){const emojis=["🌿","🍃","🥬","✨","🎉","🍋","🍓"],colors=["#FF7A1A","#F2B43B","#C5E86C","#1CA85E","#FFFFFF"],n=46;for(let i=0;i<n;i++){const p=document.createElement("div");p.className="confetti-piece";if(Math.random()<0.5){p.textContent=emojis[Math.floor(Math.random()*emojis.length)];}else{p.style.width="9px";p.style.height="13px";p.style.borderRadius="2px";p.style.background=colors[Math.floor(Math.random()*colors.length)];}p.style.left=(Math.random()*100)+"vw";document.body.appendChild(p);const dx=(Math.random()*2-1)*140,dy=window.innerHeight+80,rot=(Math.random()*2-1)*720,dur=1600+Math.random()*900;const an=p.animate([{transform:"translate(0,0) rotate(0deg)",opacity:1},{transform:`translate(${dx}px,${dy}px) rotate(${rot}deg)`,opacity:.85}],{duration:dur,easing:"cubic-bezier(.2,.6,.5,1)",delay:Math.random()*250});an.onfinish=()=>p.remove();}}
 function updateAll(){const c=cartCount(),nc=document.getElementById("navCount"),total=cartTotal();nc.textContent=c;nc.classList.toggle("show",c>0);document.getElementById("mbarAmt").textContent=fmt(total)+" د.ع";document.getElementById("mbarCount").textContent=c>0?`${c} عنصر بالسلة`:"سلّتك فاضية";renderCart();renderRewards();renderCrossSell();renderProducts();renderBaskets();saveCart();}
 function setMode(m){mode=m;document.getElementById("mDelivery").classList.toggle("active",m==="delivery");document.getElementById("mPickup").classList.toggle("active",m==="pickup");const dm=document.getElementById("drawerModeTxt");dm.textContent=(m==="delivery")?"توصيل لباب البيت":"استلام من المتجر — بدون رسوم توصيل";}
 function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("overlay").classList.add("open");document.body.style.overflow="hidden";}
 function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("overlay").classList.remove("open");document.body.style.overflow="";}
-function checkout(){if(cartCount()===0)return;let msg="🛒 *طلب جديد من اطلبها*\n";msg+=mode==="delivery"?"📦 النوع: توصيل لباب البيت\n\n":"🏪 النوع: استلام من المتجر\n\n";Object.entries(cart).forEach(([id,q])=>{const it=findItem(id);msg+=`• ${it.name} ×${q} — ${fmt(it.price*q)} د.ع\n`;});msg+=`\n💰 *المجموع: ${fmt(cartTotal())} د.ع*`;var _rw=TIERS.filter(t=>cartTotal()>=t.amt);if(_rw.length)msg+="\n🎁 مكافآت مفتوحة: "+_rw.map(t=>t.name).join(" · ");msg+="\n🔍 رح أفحص الطلب قبل الدفع";msg+="\n\n📍 العنوان: __________\n👤 الاسم: __________";window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank");}
+let wallet=0;const WALLET_RATE=.02;
+function loadWallet(){try{wallet=parseInt(localStorage.getItem("otlubhaa_wallet")||"0",10)||0;}catch(e){wallet=0;}}
+function saveWallet(){try{localStorage.setItem("otlubhaa_wallet",String(wallet));}catch(e){}}
+function refreshWallet(){const el=document.getElementById("walletAmt");if(el)el.textContent=fmt(wallet);}
+function getRefCode(){try{let c=localStorage.getItem("otlubhaa_ref");if(!c){const ch="ABCDEFGHJKMNPQRSTUVWXYZ23456789";c="OTL-";for(let i=0;i<4;i++)c+=ch[Math.floor(Math.random()*ch.length)];localStorage.setItem("otlubhaa_ref",c);}return c;}catch(e){return "OTL-2026";}}
+function shareReferral(){const code=getRefCode();const url=location.origin+location.pathname;const txt="🍓 جرّب \"اطلبها\" — أطيب فواكه وخضار بالسماوة توصلك لباب البيت، وتفحصها قدّام المندوب قبل ما تدفع!\n🎁 استخدم كودي "+code+" وتاخذ خصم ١٠٪ على أول طلب\n"+url;if(navigator.share){navigator.share({text:txt}).catch(()=>{});}else{window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank");}}
+function copyRef(){const code=getRefCode();const done=()=>showToast("📋 انتسخ الكود: "+code);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(done).catch(done);}else{done();}}
+function saveLastOrder(){try{localStorage.setItem("otlubhaa_last",JSON.stringify({items:cart,total:cartTotal(),ts:Date.now()}));}catch(e){}}
+function reorderLast(){try{const sv=localStorage.getItem("otlubhaa_last");if(!sv)return;const o=JSON.parse(sv);if(o&&o.items){cart={};Object.entries(o.items).forEach(([id,q])=>{if(findItem(id))cart[id]=q;});updateAll();openCart();showToast("🔄 رجّعنا طلبك السابق للسلة");}}catch(e){}}
+function maybeShowReorder(){try{const sv=localStorage.getItem("otlubhaa_last");if(!sv)return;const o=JSON.parse(sv);const n=o&&o.items?Object.keys(o.items).length:0;if(!n)return;const h=document.getElementById("reorderHero");if(h){h.style.display="inline-flex";h.querySelector("span").textContent="🔄 أعد طلبك السابق ("+n+" أصناف)";}const e2=document.getElementById("reorderEmpty");if(e2)e2.style.display="inline-flex";}catch(e){}}
+function checkout(){if(cartCount()===0)return;const total=cartTotal();let msg="🛒 *طلب جديد من اطلبها*\n";msg+=mode==="delivery"?"📦 النوع: توصيل لباب البيت\n\n":"🏪 النوع: استلام من المتجر\n\n";Object.entries(cart).forEach(([id,q])=>{const it=findItem(id);msg+=`• ${it.name} ×${q} — ${fmt(it.price*q)} د.ع\n`;});msg+=`\n💰 *المجموع: ${fmt(total)} د.ع*`;var _rw=TIERS.filter(t=>total>=t.amt);if(_rw.length)msg+="\n🎁 مكافآت مفتوحة: "+_rw.map(t=>t.name).join(" · ");const earn=Math.round(total*WALLET_RATE/250)*250;if(earn>0)msg+=`\n💳 أكسب من هذا الطلب: ${fmt(earn)} د.ع لمحفظتي (رصيدي الحالي: ${fmt(wallet)})`;msg+="\n🔍 رح أفحص الطلب قبل الدفع";msg+="\n\n👤 الاسم: __________\n📍 العنوان: __________\n🎁 كود صديق (إن وجد): __________";if(earn>0){wallet+=earn;saveWallet();refreshWallet();}saveLastOrder();maybeShowReorder();window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank");}
 let toastTimer;function showToast(text){const t=document.getElementById("toast");document.getElementById("toastMsg").textContent=text;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
 function tickCountdown(){const now=new Date(),end=new Date(now);end.setHours(23,59,59,999);let diff=Math.max(0,end-now);const h=Math.floor(diff/3.6e6);diff-=h*3.6e6;const m=Math.floor(diff/6e4);diff-=m*6e4;const s=Math.floor(diff/1e3);document.getElementById("cdH").textContent=String(h).padStart(2,"0");document.getElementById("cdM").textContent=String(m).padStart(2,"0");document.getElementById("cdS").textContent=String(s).padStart(2,"0");}
 function animateCount(el){const target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.decimals||"0"),pre=el.dataset.prefix||"",suf=el.dataset.suffix||"",dur=1400,t0=performance.now();function step(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3),v=target*e;el.innerHTML=pre+(dec?v.toFixed(dec):Math.round(v))+(suf?`<span class="u">${suf}</span>`:"");if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
@@ -948,7 +1011,7 @@ ensureVideosPlay();
 ["touchstart","click","scroll","keydown"].forEach(ev=>window.addEventListener(ev,ensureVideosPlay,{once:true,passive:true}));
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)ensureVideosPlay();});
 document.querySelectorAll("video").forEach(v=>{v.addEventListener("canplay",ensureVideosPlay);v.addEventListener("loadeddata",ensureVideosPlay);});
-loadCart();{const _t=cartTotal();unlockedTiers=TIERS.filter(t=>_t>=t.amt).length;}renderProducts();renderBaskets();updateAll();setMode("delivery");tickCountdown();setInterval(tickCountdown,1000);
+loadCart();loadWallet();{const _t=cartTotal();unlockedTiers=TIERS.filter(t=>_t>=t.amt).length;}renderProducts();renderBaskets();updateAll();setMode("delivery");refreshWallet();maybeShowReorder();(function(){var rc=document.getElementById("refCode");if(rc)rc.textContent=getRefCode();})();tickCountdown();setInterval(tickCountdown,1000);
 document.querySelectorAll(".reveal").forEach((el,i)=>{el.style.transitionDelay=(i%4*0.07)+"s";io.observe(el);});
 document.querySelectorAll(".stat .n[data-count]").forEach(el=>io.observe(el));
 document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("mobopen")));
